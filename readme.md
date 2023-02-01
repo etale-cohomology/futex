@@ -94,30 +94,30 @@ pthread_barrier_init()/pthread_barrier_destroy() / pthread_barrier_wait()
 
 ## bench
 
-	pipe
-				128              512            1,024          4,096
-			1,319 Mb/s       5,110 Mb/s       8,932 Mb/s    20,297 Mb/s
-	1,288,233 msg/s  1,247,449 msg/s  1,090,370 msg/s  619,407 msg/s
+  pipe
+        128              512            1,024          4,096
+      1,319 Mb/s       5,110 Mb/s       8,932 Mb/s    20,297 Mb/s
+  1,288,233 msg/s  1,247,449 msg/s  1,090,370 msg/s  619,407 msg/s
 
-	fifo
-				128              512            1,024          4,096
-			1,358 Mb/s       5,491 Mb/s       8,440 Mb/s    22,018 Mb/s
-	1,326,016 msg/s  1,340,502 msg/s  1,030,215 msg/s  671,929 msg/s
+  fifo
+        128              512            1,024          4,096
+      1,358 Mb/s       5,491 Mb/s       8,440 Mb/s    22,018 Mb/s
+  1,326,016 msg/s  1,340,502 msg/s  1,030,215 msg/s  671,929 msg/s
 
-	unnamed unix domain socket
-				128              512            1,024          4,096
-			1,117 Mb/s       4,401 Mb/s       8,869 Mb/s    17,207 Mb/s
-	1,090,370 msg/s  1,074,548 msg/s  1,082,674 msg/s  525,121 msg/s
+  unnamed unix domain socket
+        128              512            1,024          4,096
+      1,117 Mb/s       4,401 Mb/s       8,869 Mb/s    17,207 Mb/s
+  1,090,370 msg/s  1,074,548 msg/s  1,082,674 msg/s  525,121 msg/s
 
-	named unix domain socket
-		 128                 512            1,024         4,096
-		 100 Mb/s            102 Mb/s         109 Mb/s       97 Mb/s
-	97,600 msg/s        24,986 msg/s     13,289 msg/s   2,968 msg/s
+  named unix domain socket
+     128                 512            1,024         4,096
+     100 Mb/s            102 Mb/s         109 Mb/s       97 Mb/s
+  97,600 msg/s        24,986 msg/s     13,289 msg/s   2,968 msg/s
 
-	tcp
-			128              512            1,024           4,096
-			106 Mb/s         143 Mb/s         135 Mb/s        128 Mb/s
-	103,508 msg/s     34,852 msg/s     16,529 msg/s     3,897 msg/s
+  tcp
+      128              512            1,024           4,096
+      106 Mb/s         143 Mb/s         135 Mb/s        128 Mb/s
+  103,508 msg/s     34,852 msg/s     16,529 msg/s     3,897 msg/s
 
 ## notes
 
@@ -170,13 +170,6 @@ Modifying such state requires a mutex
 Implementing condition variables using futexes is very complicated
 
 --------------------------------------------------------------------------------------------------------------------------------
-git init
-git remote add origin https://github.com/etale-cohomology/futex.git
-git c
-git checkout -b origin/master
-git branch -u origin/master
-gitp
-
 git init
 git remote add origin https://github.com/etale-cohomology/futex.git
 gitc
